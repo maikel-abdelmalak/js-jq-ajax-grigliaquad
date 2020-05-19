@@ -18,11 +18,13 @@ $('.quadrato').click(function(){
         success : function(data) {
             var numero = data.response
             if(numero <= 5){
+                quadrato.removeClass('verde');
                 quadrato.addClass('rosso');
-                quadrato.text(numero)
+                quadrato.find('p').text(numero)
             }else{
+                quadrato.removeClass('rosso');
                 quadrato.addClass('verde');
-                quadrato.text(numero)
+                quadrato.find('p').text(numero)
             }
 
         },
